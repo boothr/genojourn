@@ -1,0 +1,64 @@
+:root {
+    --default-size: 12px;
+    --dark-green: #237e66;
+    --light-green: #40bc99;
+    --light-yellow: #f7f6f3;
+    --main-font-color: #333;
+    --light-font-color: #969696;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: var(--default-size);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* utility classes */
+.width-full {
+    width: 100%;
+}
+.font-bold {
+    font-weight: 700;
+}
+.font-normal {
+    font-weight: 400;
+}
+.flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+.flex-align-center {
+    align-content: center;
+}
+.justify-center {
+    justify-items: center;
+}
+.justify-start {
+    justify-items: flex-start;
+}
+.justify-end {
+    justify-items: flex-end;
+}
+.justify-between {
+    justify-content: space-between;
+}
+/* end utility classes */
