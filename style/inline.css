@@ -51,7 +51,7 @@ body {
     flex-wrap: nowrap;
 }
 .flex-align-center {
-    align-content: center;
+    align-items: center;
 }
 .justify-center {
     justify-items: center;
@@ -66,9 +66,37 @@ body {
     justify-content: space-between;
 }
 /* end utility classes */
+.content {
+    padding: 0 13.3%;
+}
 .header {
     padding: 0.8rem 1.4rem;
 }
+
 .header-logo {
     width: 6.25rem;
+}
+.auto-margin {
+    width: 33.3%;
+}
+.full-menu {
+    display: flex;
+}
+.reduced-menu {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .content {
+        padding: 0;
+    }
+    .header {
+        margin: 0;
+    }
+    .full-menu {
+        display: none;
+    }
+    .reduced-menu {
+        display: flex;
+    }
 }
