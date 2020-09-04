@@ -26,6 +26,9 @@ body {
 .width-full {
     width: 100%;
 }
+.none {
+    display: none;
+}
 .font-bold {
     font-weight: 700;
 }
