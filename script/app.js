@@ -46,3 +46,24 @@ const WaterColor = (() => {
 
 const wc = new WaterColor();
 wc.init();
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("click", (e) => {
+        const elem = e.target.closest(".menu");
+        if(elem) {
+            [].map.call(document.querySelectorAll(".view"), (_i) => { 
+                _i.classList.toggle("display-none", true);
+                _i.classList.toggle("flex", false);
+            });
+            if(elem.classList.contains("about")) {
+                document.querySelector(".about-view").classList.toggle("display-none", false);
+                document.querySelector(".about-view").classList.toggle("flex", true);
+            }
+            else if(elem.classList.contains("contact")) {
+                document.querySelector(".contact-view").classList.toggle("flex", true);
+                document.querySelector(".contact-view").classList.toggle("display-none", false);
+            }
+        }
+    });
+
+}, false);

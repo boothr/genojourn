@@ -5,6 +5,10 @@
     --light-yellow: #f7f6f3;
     --main-font-color: #333;
     --light-font-color: #969696;
+    --font-size-sm: 10px;
+    --font-size-lg: 14px;
+    --font-bold: 700;
+    --font-normal: 400;
 }
 * {
     box-sizing: border-box;
@@ -13,6 +17,7 @@
 }
 
 html {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: var(--default-size);
 }
 
@@ -21,19 +26,22 @@ body {
     margin: 0;
     background-color: var(--light-yellow);
 }
-
+a[role="button"] {
+    text-decoration: none;
+    cursor: pointer;
+}
 /* utility classes */
 .width-full {
-    width: 100%;
-}
-.none {
-    display: none;
+    width: 100%;href="index.html"
 }
 .font-bold {
-    font-weight: 700;
+    font-weight: var(--font-bold);
 }
 .font-normal {
-    font-weight: 400;
+    font-weight: var(--font-normal);
+}
+.display-none {
+    display: none;
 }
 .flex {
     display: flex;
@@ -79,11 +87,30 @@ body {
 .auto-margin {
     width: 33.3%;
 }
+
 .full-menu {
     display: flex;
 }
+
 .reduced-menu {
     display: none;
+}
+
+.btn-primary {
+    padding: 1rem;
+    font-size: var(--font-size-lg);
+    color: var(--dark-green);
+}
+
+.contact {
+    margin-left: 1rem;
+    border-radius: 1.75rem;
+    border: solid 0.08rem var(--dark-green);
+    transition: all 0.3s ease;
+}
+.contact:hover {
+    color: var(--light-yellow);
+    background-color: var(--dark-green);
 }
 
 @media(max-width: 768px) {

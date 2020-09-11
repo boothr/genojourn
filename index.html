@@ -15,8 +15,8 @@
                 <div class=" width-full flex flex-row justify-between">
                     <a href="index.html" aria-label="Geneology Journeys Home Page"><img class="header-logo" src="content/GenealogyJourneys Logo-01-np.png" alt="Genealogy Journeys"></img></a>
                     <div class="full-menu flex-row flex-nowrap flex-align-center">
-                        <a href="index.html" aria-label="Contact">Contact</a>
-                        <a href="index.html" aria-label="About">About</a>
+                        <a role="button" class="btn-primary menu about font-bold" aria-label="About">ABOUT</a>
+                        <a role="button" class="btn-primary menu contact font-bold" aria-label="Contact">CONTACT</a>
                     </div>
                     <div class="reduced-menu flex-align-center">
                         <svg width="40" height="33">
@@ -29,8 +29,13 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-column flex-align-center full-width">
+            <div class="view flex-column flex-align-center full-width">
                 <canvas id="wcCanvas" width="400" height="400"></canvas>
+            </div>
+            <div class="view about-view display-none">
+                <img src="./content/Dan-Headshot.png"/>
+            </div>
+            <div class="view contact-view display-none">
             </div>
         </main>
         <footer>
