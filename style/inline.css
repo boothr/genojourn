@@ -103,7 +103,7 @@ a[role="button"] {
 }
 
 .about-view {
-    background-image: url("/content/Dan-Headshot.png");
+    background-image: url("../content/Dan-Headshot.png");
     min-height: 52rem;
 }
 
