@@ -44,8 +44,8 @@ const WaterColor = (() => {
     return WaterColor;
 })();
 
-const wc = new WaterColor();
-wc.init();
+// const wc = new WaterColor();
+// wc.init();
 
 document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {

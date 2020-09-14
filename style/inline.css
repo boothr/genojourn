@@ -2,7 +2,7 @@
     --default-size: 12px;
     --dark-green: #237e66;
     --light-green: #40bc99;
-    --light-yellow: #f7f6f3;
+    --light-yellow: #fffef9;
     --main-font-color: #333;
     --light-font-color: #969696;
     --font-size-sm: 10px;
@@ -32,7 +32,7 @@ a[role="button"] {
 }
 /* utility classes */
 .width-full {
-    width: 100%;href="index.html"
+    width: 100%;
 }
 .font-bold {
     font-weight: var(--font-bold);
@@ -102,21 +102,23 @@ a[role="button"] {
     color: var(--dark-green);
 }
 
+.about-view {
+    background-image: url("/content/Dan-Headshot.png");
+    min-height: 52rem;
+}
+
 .contact {
     margin-left: 1rem;
-    border-radius: 1.75rem;
+    border-radius: 0.4rem;
     border: solid 0.08rem var(--dark-green);
+    color: var(--light-yellow);
+    background-color: var(--dark-green);
     transition: all 0.3s ease;
 }
 .contact:hover {
-    color: var(--light-yellow);
-    background-color: var(--dark-green);
-}
-
-@media(max-width: 768px) {
-    .content {
-        padding: 0;
-    }
+    -webkit-box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.12);
+    box-shadow: 0px 5p1
     .header {
         margin: 0;
     }
