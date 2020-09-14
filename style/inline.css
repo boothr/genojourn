@@ -105,6 +105,8 @@ a[role="button"] {
 .about-view {
     background-image: url("../content/Dan-Headshot.png");
     min-height: 52rem;
+    background-repeat: no-repeat;
+    background-position: center top;
 }
 
 .contact {
