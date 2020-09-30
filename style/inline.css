@@ -19,66 +19,50 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: var(--default-size);
+    background: #fff;
+    background: linear-gradient(135deg, rgb(230, 250, 255) 0%,rgba(64, 188, 153,0.25) 100%);
+    height: 100%;
 }
 
 body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,1) 0%,rgba(64, 188, 153,0.25) 100%);
 }
 a[role="button"] {
     text-decoration: none;
     cursor: pointer;
 }
 /* utility classes */
-.width-full {
-    width: 100%;
-}
-.font-bold {
-    font-weight: var(--font-bold);
-}
-.font-normal {
-    font-weight: var(--font-normal);
-}
-.display-none {
-    display: none;
-}
-.flex {
-    display: flex;
-}
-.flex-row {
-    flex-direction: row;
-}
-.flex-column {
-    flex-direction: column;
-}
-.flex-wrap {
-    flex-wrap: wrap;
-}
-.flex-nowrap {
-    flex-wrap: nowrap;
-}
-.flex-align-center {
-    align-items: center;
-}
-.justify-center {
-    justify-items: center;
-}
-.justify-start {
-    justify-items: flex-start;
-}
-.justify-end {
-    justify-items: flex-end;
-}
-.justify-between {
-    justify-content: space-between;
-}
+.width-full { width: 100%; }
+.width-half { width: 50%; }
+.height-full { height: 100%; }
+.font-bold { font-weight: var(--font-bold); }
+.font-normal { font-weight: var(--font-normal); }
+.display-none { display: none; }
+.flex { display: flex; }
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+.flex-align-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-evenly { justify-content: space-evenly; }
+.font-lg { font-size: 2.3rem; }
+.font-md { font-size: 1.6rem; }
+.font-sm { font-size: 0.9rem; }
+.color-main { color: var(--dark-green); }
+.color-md-gray { color: var(--main-font-color); }
 /* end utility classes */
 .content {
     padding: 0 13.3%;
 }
 .header {
     padding: 0.8rem 4rem;
+    max-width: 102rem;
+    margin: 0 auto;
 }
 
 .header-logo {
@@ -125,14 +109,29 @@ a[role="button"] {
 .card-container {
     justify-content: space-evenly;
     padding: 0 4rem;
-    
+    max-width: 102rem;
+    width: 100%;
+    margin: 0 auto;
 }
 .card {
-    max-width: 54rem;
-    min-width: 24rem;
     min-height: 34rem;
-    background-color: #fff;
+    background-color:#fff;
     margin-bottom: 8rem;
+    border-radius: 0.4rem;
+    padding: 0.8rem;
+}
+
+.image-container {
+    padding: 1.4rem;
+    border-radius: 0.4rem;
+}
+
+.image-bg {
+    background-image: url("../content/Dan-Headshot.png");
+    min-height: 42rem;
+    background-repeat: no-repeat;
+    background-position: center top;
+    border-radius: 0.2rem;
 }
 
 .shadow-left {
@@ -142,6 +141,15 @@ a[role="button"] {
 .shadow-right {
     box-shadow: -5px 23px 26px 0px rgba(50, 50, 50, 0.19), 
                 -2px 2px 4px -4px rgba(50, 50, 50, 0.19);
+}
+.fade {
+    transition: all 0.2s ease;
+    opacity: 0;
+    transform: translateY(8px);
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0px);
 }
 @media screen and (max-width: 556px) {
     .header {

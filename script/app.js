@@ -44,26 +44,52 @@ const WaterColor = (() => {
     return WaterColor;
 })();
 
+const QuoteBlock = (() => {
+    function QuoteBlock () {
+        const containerId = "#quoteContainer",
+            quoteTextSelector = ".quote-text",
+            quoteNameSelector = ".quote-name";
+
+        const quotes = [
+            { name: "quoter1", text:"this is a quote 1." },
+            { name: "quoter2", text:"this is a quote 2." },
+            { name: "quoter3", text:"this is a quote 3." },
+            { name: "quoter4", text:"this is a quote 4." },
+        ];
+        const elements = [
+            document.querySelector(`${containerId}`),
+            document.querySelector(`${quoteNameSelector}`),
+            document.querySelector(`${quoteTextSelector}`),
+        ];
+
+        var quoteIndex = 0;
+        elements[1].innerHTML = quotes[0].name;
+        elements[2].innerHTML = quotes[0].text;
+        this.fadout = () => {
+            elements[0].classList.remove("fade-in");
+            window.setTimeout(() => {
+                //quoteIndex = quoteIndex < quotes.length ? quoteIndex++ : 0;
+                quoteIndex++;
+                if(quoteIndex >= quotes.length) {
+                    quoteIndex = 0;
+                }
+                const quote = quotes[quoteIndex];
+ 
+                elements[1].innerHTML = quote.name;
+                elements[2].innerHTML = quote.text;
+                elements[0].classList.add("fade-in");
+            }, 200);
+        }
+    }
+    return QuoteBlock;
+    
+})();
 // const wc = new WaterColor();
 // wc.init();
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.addEventListener("click", (e) => {
-        const elem = e.target.closest(".menu");
-        if(elem) {
-            [].map.call(document.querySelectorAll(".view"), (_i) => { 
-                _i.classList.toggle("display-none", true);
-                _i.classList.toggle("flex", false);
-            });
-            if(elem.classList.contains("about")) {
-                document.querySelector(".about-view").classList.toggle("display-none", false);
-                document.querySelector(".about-view").classList.toggle("flex", true);
-            }
-            else if(elem.classList.contains("contact")) {
-                document.querySelector(".contact-view").classList.toggle("flex", true);
-                document.querySelector(".contact-view").classList.toggle("display-none", false);
-            }
-        }
-    });
-
+    const q = new QuoteBlock();
+    window.setInterval(() => {
+        q.fadout();
+    }, 5000);
 }, false);
