@@ -51,10 +51,10 @@ const QuoteBlock = (() => {
             quoteNameSelector = ".quote-name";
 
         const quotes = [
-            { name: "quoter1", text:"this is a quote 1." },
-            { name: "quoter2", text:"this is a quote 2." },
-            { name: "quoter3", text:"this is a quote 3." },
-            { name: "quoter4", text:"this is a quote 4." },
+            { name: "&mdash; quoter1", text: "this is a quote 1." },
+            { name: "&mdash; quoter2", text: "this is a quote 2." },
+            { name: "&mdash; quoter3", text: "this is a quote 3." },
+            { name: "&mdash; quoter4", text: "this is a quote 4." },
         ];
         const elements = [
             document.querySelector(`${containerId}`),
