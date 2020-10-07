@@ -222,6 +222,9 @@ a[role="button"] {
     width: 75%;
     height: 100%;
     margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 6.5rem 0 0 0;
 }
 @media screen and (max-width: 556px) {
     body { padding: 0; }
@@ -234,5 +237,8 @@ a[role="button"] {
     }
     .reduced-menu {
         display: flex;
+    }
+    .tag-line {
+        grid-template-rows: calc(100vh - 6.5rem) auto;
     }
 }

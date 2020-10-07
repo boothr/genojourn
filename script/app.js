@@ -51,10 +51,10 @@ const QuoteBlock = (() => {
             quoteNameSelector = ".quote-name";
 
         const quotes = [
-            { name: "&mdash; quoter1", text: "this is a quote 1." },
-            { name: "&mdash; quoter2", text: "this is a quote 2." },
-            { name: "&mdash; quoter3", text: "this is a quote 3." },
-            { name: "&mdash; quoter4", text: "this is a quote 4." },
+            { name: "&mdash; Lynn Ryon", text: "Dan has mad skills and without question genealogy research is one of them!" },
+            { name: "&mdash; Dianah Dulany", text: "I just can’t say how much I’m loving what Dan is finding! And he’s fast! " },
+            { name: "&mdash; Jennifer Schafer", text: "Dan was able to find a daughter my husband had placed in adoption when he was 20. Thank you so much for your help." },
+            { name: "&mdash; Pat Walsh", text: "[Dan] works incredibly fast with complex information sources, responds quickly and delivers thoroughly verified results. I am happy to recommend Dan and Genealogy Journeys." },
         ];
         const elements = [
             document.querySelector(`${containerId}`),
