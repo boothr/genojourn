@@ -61,6 +61,9 @@ a[role="button"] {
 .color-main { color: var(--dark-green); }
 .color-md-gray { color: var(--main-font-color); }
 .color-lt-gray { color: var(--light-font-color); }
+.p-t-lg { padding-top: 4.4rem; }
+.p-t-md { padding-top: 2.4rem; }
+.p-t-sm { padding-top: 0.4rem; }
 /* end utility classes */
 .content {
     padding: 0 13.3%;
@@ -99,14 +102,17 @@ a[role="button"] {
     background-repeat: no-repeat;
     background-position: center top;
 }
-
+.about {
+    color: var(--main-font-color);
+    height: 3.3rem;
+}
 .contact {
     margin-left: 1rem;
     border-radius: 2.3rem;
-    border: solid 0.08rem var(--dark-green);
     color: var(--light-yellow);
-    background-color: var(--dark-green);
+    background-color: var(--main-font-color);
     transition: all 0.3s ease;
+    height: 3.3rem;
 }
 .contact:hover {
     -webkit-box-shadow: 0px 5px 8px 1px rgba(0,0,0,0.12);
