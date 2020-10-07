@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 :root {
     --default-size: 12px;
     --dark-green: #237e66;
@@ -56,8 +56,9 @@ a[role="button"] {
 .justify-between { justify-content: space-between; }
 .justify-evenly { justify-content: space-evenly; }
 .font-lg { font-size: 2.3rem; }
-.font-md { font-size: 1.6rem; }
-.font-sm { font-size: 1.1rem; }
+.font-md { font-size: 1.8rem; }
+.font-sm { font-size: 1.3rem; }
+.line-height-md { line-height: 3.4rem; }
 .color-main { color: var(--dark-green); }
 .color-md-gray { color: var(--main-font-color); }
 .color-lt-gray { color: var(--light-font-color); }
@@ -106,8 +107,9 @@ a[role="button"] {
     color: var(--light-yellow);
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 1.4rem 0;
     width: 27rem;
+    transform: translateY(-0.8rem);
 }
 .about-view {
     background-image: url("../content/Dan-Headshot.png");
@@ -206,14 +208,18 @@ a[role="button"] {
     grid-area: heading;
     grid-row-start: 1;
     z-index: 5;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
 }
 .bg-splash {
     grid-area: splash;
     grid-row-start: 2;
     background-image: url("../content/bg-splash.jpg");
-    height: 60vh;
+    height: 54vh;
     min-height: 20rem;
-    max-height: 25rem;
+    max-height: 54vh;
     background-repeat: no-repeat;
     background-position: center right;
     opacity: 1;
@@ -225,11 +231,17 @@ a[role="button"] {
     grid-area: splashline;
     grid-row-start: 2;
     z-index: 2;
-    height: 60vh;
+    height: 54vh;
     min-height: 20rem;
-    max-height: 25rem;
+    max-height: 54vh;
+    padding-left: 8rem;
     background: linear-gradient(90deg, rgba(64, 188, 153, .2) 0%,rgba(64, 188, 153, .2) 100%);
 }
+.splash-line > p { 
+    max-width: 30rem; 
+    text-align: center;
+    font-weight: 900;
+ }
 .text {
     grid-area: text;
     grid-row-start: 3;
@@ -242,18 +254,21 @@ a[role="button"] {
 }
 
 .tag-line { 
-    line-height: 3.4rem; 
     width: 100%;
     min-height: 20rem;
 }
-.tag {
-    margin: auto;
+.tag-pos {
+    margin: 0 1.4rem;
 }
 .quotes {
     grid-area: quote;
     background-color: var(--light-green);
     color: var(--light-yellow);
     min-height: 12rem;
+}
+.quote-text,
+.quote-name {
+    text-align: center;
 }
 @media screen and (max-width: 556px) {
     body { padding: 0; }
@@ -269,5 +284,8 @@ a[role="button"] {
     }
     .tag-line {
         grid-template-rows: 6.5rem calc(100vh - 6.5rem) auto;
+    }
+    .splash-line {
+        padding-left: 0.8rem;
     }
 }
