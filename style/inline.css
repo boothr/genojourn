@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
     --default-size: 12px;
     --dark-green: #237e66;
@@ -13,6 +13,7 @@
     --font-normal: 400;
     --font-main: 'DM Serif Display', serif;
     --font-button: Arial, Helvetica, sans-serif;
+    --font-roboto: 'Roboto', sans-serif
 }
 * {
     box-sizing: border-box;
@@ -21,10 +22,9 @@
 }
 
 html {
-    font-family: var(--font-main), Arial, Helvetica;
+    font-family: var(--font-roboto);
     font-size: var(--default-size);
     background: #fff;
-    background: linear-gradient(135deg, rgb(238, 252, 255) 0%,rgba(64, 188, 153,0.35) 100%);
     height: 100%;
 }
 
@@ -57,13 +57,17 @@ a[role="button"] {
 .justify-evenly { justify-content: space-evenly; }
 .font-lg { font-size: 2.3rem; }
 .font-md { font-size: 1.6rem; }
-.font-sm { font-size: 0.9rem; }
+.font-sm { font-size: 1.1rem; }
 .color-main { color: var(--dark-green); }
 .color-md-gray { color: var(--main-font-color); }
 .color-lt-gray { color: var(--light-font-color); }
+.color-lt-yellow { color: var(--light-yellow); }
 .p-t-lg { padding-top: 4.4rem; }
 .p-t-md { padding-top: 2.4rem; }
 .p-t-sm { padding-top: 0.4rem; }
+.p-l-lg { padding-left: 4.4rem; }
+.p-l-md { padding-left: 2.4rem; }
+.p-l-sm { padding-left: 0.4rem; }
 /* end utility classes */
 .content {
     padding: 0 13.3%;
@@ -75,7 +79,7 @@ a[role="button"] {
 }
 
 .header-logo {
-    width: 8.25rem;
+    width: 7.25rem;
 }
 .auto-margin {
     width: 33.3%;
@@ -95,14 +99,23 @@ a[role="button"] {
     color: var(--light-yellow);
     height: 3.45rem;
 }
-
+.btn-discover {
+    background-color: var(--light-green);
+    padding: 0.8rem;
+    border-radius: 1.9rem;
+    color: var(--light-yellow);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 27rem;
+}
 .about-view {
     background-image: url("../content/Dan-Headshot.png");
     min-height: 52rem;
     background-repeat: no-repeat;
     background-position: center top;
 }
-.about {
+.menu-btn {
     color: var(--main-font-color);
     height: 3.3rem;
 }
@@ -184,7 +197,9 @@ a[role="button"] {
     grid-template-areas: 
     "heading"
     "splash"
-    "text";
+    "splashline"
+    "text"
+    "quote";
 }
 .top-heading {
     padding: 1.2rem;
@@ -194,19 +209,30 @@ a[role="button"] {
 }
 .bg-splash {
     grid-area: splash;
-    grid-row-start: 1;
+    grid-row-start: 2;
     background-image: url("../content/bg-splash.jpg");
-    height: 100vh;
+    height: 60vh;
+    min-height: 20rem;
+    max-height: 25rem;
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center right;
     opacity: 1;
     background-size: cover;
     opacity: 0.35;
     z-index: 2;
 }
+.splash-line {
+    grid-area: splashline;
+    grid-row-start: 2;
+    z-index: 2;
+    height: 60vh;
+    min-height: 20rem;
+    max-height: 25rem;
+    background: linear-gradient(90deg, rgba(64, 188, 153, .2) 0%,rgba(64, 188, 153, .2) 100%);
+}
 .text {
     grid-area: text;
-    grid-row-start: 1;
+    grid-row-start: 3;
     z-index: 4;
 }
 
@@ -216,23 +242,18 @@ a[role="button"] {
 }
 
 .tag-line { 
-    line-height: 5rem; 
-    width: 75%;
-    height: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-rows: 6.5rem 1fr 1fr;
-    grid-template-areas: 
-        "."
-        "tag"
-        "quotes";
+    line-height: 3.4rem; 
+    width: 100%;
+    min-height: 20rem;
 }
 .tag {
-    grid-area: tag;
     margin: auto;
 }
 .quotes {
-    grid-area: quotes;
+    grid-area: quote;
+    background-color: var(--light-green);
+    color: var(--light-yellow);
+    min-height: 12rem;
 }
 @media screen and (max-width: 556px) {
     body { padding: 0; }
