@@ -209,9 +209,7 @@ a[role="button"] {
     grid-row-start: 1;
     z-index: 4;
 }
-.quotes {
-    transform: translateY(4rem);
-}
+
 .container {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
@@ -223,8 +221,18 @@ a[role="button"] {
     height: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding: 6.5rem 0 0 0;
+    grid-template-rows: 6.5rem 1fr 1fr;
+    grid-template-areas: 
+        "."
+        "tag"
+        "quotes";
+}
+.tag {
+    grid-area: tag;
+    margin: auto;
+}
+.quotes {
+    grid-area: quotes;
 }
 @media screen and (max-width: 556px) {
     body { padding: 0; }
@@ -239,6 +247,6 @@ a[role="button"] {
         display: flex;
     }
     .tag-line {
-        grid-template-rows: calc(100vh - 6.5rem) auto;
+        grid-template-rows: 6.5rem calc(100vh - 6.5rem) auto;
     }
 }
