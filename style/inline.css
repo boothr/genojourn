@@ -29,7 +29,7 @@ html {
 }
 
 body {
-    padding: 2rem 0 0 0;
+    padding: 0;
     margin: 0;
 }
 a[role="button"] {
@@ -72,7 +72,7 @@ a[role="button"] {
 }
 
 .header-logo {
-    width: 10.25rem;
+    width: 8.25rem;
 }
 .auto-margin {
     width: 33.3%;
@@ -89,7 +89,8 @@ a[role="button"] {
 .btn-primary {
     padding: 1rem;
     font-size: var(--font-size-lg);
-    color: var(--dark-green);
+    color: var(--light-yellow);
+    height: 3.45rem;
 }
 
 .about-view {
@@ -101,7 +102,7 @@ a[role="button"] {
 
 .contact {
     margin-left: 1rem;
-    border-radius: 0.4rem;
+    border-radius: 2.3rem;
     border: solid 0.08rem var(--dark-green);
     color: var(--light-yellow);
     background-color: var(--dark-green);
@@ -137,7 +138,7 @@ a[role="button"] {
     background-image: url("../content/Dan-Headshot.png");
     min-height: 42rem;
     background-repeat: no-repeat;
-    background-position: center top;auto
+    background-position: center top;
     border-radius: 0.2rem;
 }
 
@@ -172,6 +173,39 @@ a[role="button"] {
 .main-heading {
     padding: 0.6rem 1.2rem 0 0.8rem;
 }
+.heading-grid {
+    display: grid;
+    grid-template-areas: 
+    "heading"
+    "splash"
+    "text";
+}
+.top-heading {
+    padding: 1.2rem;
+    grid-area: heading;
+    grid-row-start: 1;
+    z-index: 5;
+}
+.bg-splash {
+    grid-area: splash;
+    grid-row-start: 1;
+    background-image: url("../content/bg-splash.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center top;
+    opacity: 1;
+    background-size: cover;
+    opacity: 0.35;
+    z-index: 2;
+}
+.text {
+    grid-area: text;
+    grid-row-start: 1;
+    z-index: 4;
+}
+.quotes {
+    transform: translateY(4rem);
+}
 .container {
     display: grid;
     grid-template-rows: auto 1fr 1fr;
@@ -180,6 +214,7 @@ a[role="button"] {
 .tag-line { 
     line-height: 5rem; 
     width: 75%;
+    height: 100%;
     margin: 0 auto;
 }
 @media screen and (max-width: 556px) {
