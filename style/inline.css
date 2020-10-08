@@ -63,6 +63,9 @@ a[role="button"] {
 .color-md-gray { color: var(--main-font-color); }
 .color-lt-gray { color: var(--light-font-color); }
 .color-lt-yellow { color: var(--light-yellow); }
+.p-lg { padding: 4.4rem; }
+.p-md { padding: 2.4rem; }
+.p-sm { padding: 1.4rem; }
 .p-t-lg { padding-top: 4.4rem; }
 .p-t-md { padding-top: 2.4rem; }
 .p-t-sm { padding-top: 0.4rem; }
@@ -111,15 +114,19 @@ a[role="button"] {
     width: 27rem;
     transform: translateY(-0.8rem);
 }
-.about-view {
-    background-image: url("../content/Dan-Headshot.png");
-    min-height: 52rem;
-    background-repeat: no-repeat;
-    background-position: center top;
+.about-text {
+    line-height: 3.4rem;
 }
 .menu-btn {
     color: var(--main-font-color);
     height: 3.3rem;
+}
+.toggle-button {
+    color: var(--light-font-color);
+}
+.toggle-button.active {
+    color: var(--main-font-color);
+
 }
 .contact {
     margin-left: 1rem;
@@ -148,28 +155,52 @@ a[role="button"] {
     border-radius: 0.4rem;
     padding: 0.8rem;
 }
-
+.step {
+    margin-bottom: 2.4rem;
+    max-width: 75%;
+    margin: 0 auto 2.4rem auto;
+}
+.step-title {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 14.502857143rem;
+    z-index: 6;
+    background-color: rgba(255, 255, 255, 1);
+}
 .image-container {
     padding: 1.4rem;
     border-radius: 0.4rem;
     display: flex;
 }
-
-.image-bg {
-    background-image: url("../content/Dan-Headshot.png");
-    min-height: 42rem;
+.about-header {
+    grid-area: toggle;
+    height: 4.8rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 9.889285714rem;
+    z-index: 6;
+    background-color: rgba(255, 255, 255, 1);
+}
+.bg-head-shot {
+    grid-area: splash;
+    grid-row-start: 3;
     background-repeat: no-repeat;
-    background-position: center top;
-    border-radius: 0.2rem;
+    background-position: top right;
+    opacity: 1;
+    background-size: cover;
+    z-index: 2;
+    overflow: hidden;
 }
 
-.shadow-left {
-    box-shadow: 5px 23px 26px 0px rgba(50, 50, 50, 0.19), 
-                2px 2px 4px -4px rgba(50, 50, 50, 0.19);
+.head-shot {
+    width: 100%;
+    height: auto;
 }
-.shadow-right {
-    box-shadow: -5px 23px 26px 0px rgba(50, 50, 50, 0.19), 
-                -2px 2px 4px -4px rgba(50, 50, 50, 0.19);
+.head-shot-overlay {
+    grid-area: splashline;
+    grid-row-start: 3;
+    z-index: 2;
+    padding-left: 8rem;
 }
 .fade {
     transition: all 0.2s ease;
@@ -203,6 +234,16 @@ a[role="button"] {
     "text"
     "quote";
 }
+.about-grid {
+    display: grid;
+    grid-template-areas: 
+    "heading"
+    "toggle"
+    "splash"
+    "splashline"
+    "text"
+    "quote";
+}
 .top-heading {
     padding: 1.2rem;
     grid-area: heading;
@@ -213,6 +254,7 @@ a[role="button"] {
     top: 0;
     background-color: #fff;
 }
+
 .bg-splash {
     grid-area: splash;
     grid-row-start: 2;
@@ -244,10 +286,14 @@ a[role="button"] {
  }
 .text {
     grid-area: text;
-    grid-row-start: 3;
     z-index: 4;
 }
-
+.heading-grid > .text {
+    grid-row-start: 3;
+}
+.about-grid > .text {
+    grid-row-start: 4;
+}
 .container {
     display: grid;
     grid-template-rows: auto 1fr 1fr;

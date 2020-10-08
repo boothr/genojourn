@@ -4,42 +4,54 @@
         <title>Geneology Journeys</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style/inline.css">
     </head>
-    <link rel="stylesheet" href="style/inline.css">
-    <body>
-        <header>
-
-        </header>
-        <main class="content">
-            <div class="header width-full flex flex-row justify-between">
-                <div class=" width-full flex flex-row justify-between">
+    <body class="color-md-gray">
+        <div class="heading-grid">
+            <div class="top-heading">
+                <div class="logo flex flex-row flex-align-center justify-between width-full">
                     <a href="index.html" aria-label="Geneology Journeys Home Page"><img class="header-logo" src="content/GenealogyJourneys Logo-01-np.png" alt="Genealogy Journeys"></img></a>
-                    <div class="full-menu flex-row flex-nowrap flex-align-center">
-                        <a role="button" class="btn-primary menu about font-bold" aria-label="About">ABOUT</a>
-                        <a role="button" class="btn-primary menu contact font-bold" aria-label="Contact">CONTACT</a>
-                    </div>
-                    <div class="reduced-menu flex-align-center">
-                        <svg width="40" height="33">
-                            <g fill="none">
-                                <path stroke="#121212" stroke-width="1" d="M2 2 L22 2"></path>
-                                <path stroke="#121212" stroke-width="1" d="M2 8 L22 8"></path>
-                                <path stroke="#121212" stroke-width="1" d="M2 14 L22 14"></path>
-                            </g>
-                        </svg>
+                    <div class="full-menu flex-row flex-nowrap" style="margin-left: auto;">
+                        <a href="about.html" role="button" class="btn-primary menu menu-btn font-bold" aria-label="About">ABOUT</a>
+                        <a role="button" class="btn-primary menu menu-btn font-bold" aria-label="Contact">CONTACT</a>
                     </div>
                 </div>
+                <div class="menu"></div>
             </div>
-            <div class="view flex-column flex-align-center full-width">
-                <canvas id="wcCanvas" width="400" height="400"></canvas>
+            <div class="bg-splash"></div>
+            <div class="splash-line flex flex-row flex-align-center p-l-md">
+                <p class="font-lg line-height-md">Let Genealogy Journeys discover YOUR story today.</p>
             </div>
-            <div class="view about-view display-none">
+            <div class="text">
+                <div class="tag-line line-height-md flex flex-column justify-evenly">
+                    <div class="tag-pos font-md font-bold flex flex-column flex-align-center">
+                        <p class="flex justify-center">
+                            Ever wanted an experience like the guests on NBC’s Who Do You Think You Are? or PBS’s Finding Your Roots?
+                        </p>
+                        <p class="flex justify-center">
+                            Genealogy Journeys can help.
+                        </p>
+                    </div>
+                    <p class="flex justify-center">
+                        <a role="button" class="btn-discover font-lg font-bold">Discover Your Story</a>
+                    </p>
+                </div>
             </div>
-            <div class="view contact-view display-none">
+            <div class="quotes font-sm font-bold flex justify-center flex-align-center" style="padding: 0.8rem;">
+                <div id="quoteContainer" class="quote-container flex flex-column flex-align-center font-lg fade fade-in">
+                    <div class="quote-text color-lt-yellow font-sm"></div>
+                    <div class="quote-name color-lt-yellow font-sm" style="margin-top: 0.8rem;"></div>
+                </div>
             </div>
-        </main>
-        <footer>
-
-        </footer>
+        </div>
         <script src="script/app.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const q = new QuoteBlock();
+                window.setInterval(() => {
+                    q.fadout();
+                }, 5000);
+            }, false);
+        </script>
     </body>
 </html>
