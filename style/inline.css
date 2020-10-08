@@ -115,7 +115,8 @@ a[role="button"] {
     transform: translateY(-0.8rem);
 }
 .about-text {
-    line-height: 3.4rem;
+    max-width: 75%;
+    margin: 0 auto;
 }
 .menu-btn {
     color: var(--main-font-color);
