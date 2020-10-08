@@ -58,6 +58,7 @@ a[role="button"] {
 .font-lg { font-size: 2.3rem; }
 .font-md { font-size: 1.8rem; }
 .font-sm { font-size: 1.3rem; }
+.font-xs { font-size: 1rem; }
 .line-height-md { line-height: 3.4rem; }
 .color-main { color: var(--dark-green); }
 .color-md-gray { color: var(--main-font-color); }
@@ -233,7 +234,8 @@ a[role="button"] {
     "splash"
     "splashline"
     "text"
-    "quote";
+    "quote"
+    "cp";
 }
 .about-grid {
     display: grid;
@@ -243,7 +245,14 @@ a[role="button"] {
     "splash"
     "splashline"
     "text"
-    "quote";
+    "cp";
+}
+.contact-grid {
+    display: grid;
+    grid-template-areas:
+    "heading"
+    "contact"
+    "cp";
 }
 .top-heading {
     padding: 1.2rem;
@@ -316,6 +325,28 @@ a[role="button"] {
 .quote-text,
 .quote-name {
     text-align: center;
+}
+.contact-main {
+    grid-area: contact;
+    margin: 4rem 0 auto 0;
+    height: 100%;
+}
+.contact-title {
+    min-width: 11.4rem;
+}
+
+.splash-cp {
+    grid-area: cp;
+    background-color: var(--light-green);
+    color: var(--light-yellow);
+    height: 6rem;
+}
+.about-cp,
+.contact-cp {
+    grid-area: cp;
+    background-color: #fff;
+    color: var(--main-font-color);
+    height: 6rem;
 }
 @media screen and (max-width: 556px) {
     body { padding: 0; }
