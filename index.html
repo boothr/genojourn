@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Geneology Journeys</title>
+        <title>Genealogy Journeys</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style/inline.css">
@@ -10,7 +10,7 @@
         <div class="heading-grid">
             <div class="top-heading">
                 <div class="logo flex flex-row flex-align-center justify-between width-full">
-                    <a href="index.html" aria-label="Geneology Journeys Home Page"><img class="header-logo" src="content/GenealogyJourneys Logo-01-np.png" alt="Genealogy Journeys"></img></a>
+                    <a href="index.html" aria-label="Genealogy Journeys Home Page"><img class="header-logo" src="content/GenealogyJourneys Logo-01-np.png" alt="Genealogy Journeys"></img></a>
                     <div class="full-menu flex-row flex-nowrap" style="margin-left: auto;">
                         <a href="about.html" role="button" class="btn-primary menu menu-btn font-bold" aria-label="About">ABOUT</a>
                         <a href="contact.html" role="button" class="btn-primary menu menu-btn font-bold" aria-label="Contact">CONTACT</a>
@@ -50,12 +50,13 @@
         <script type="text/javascript">
             document.addEventListener("DOMContentLoaded", () => {
                 const q = new QuoteBlock();
-                window.setInterval(() => {
+                const interval = () => { 
                     q.fadout();
-                }, 8000);
+                }
+                window.setInterval(interval, 8000);
                 const date = new Date();
                 document.querySelector(".splash-cp").innerHTML = `
-                    Copyright &copy; ${date.getFullYear()} Geneology Journeys. All Rights Reserved
+                    Copyright &copy; ${date.getFullYear()} Genealogy Journeys. All Rights Reserved
                 `
             }, false);
         </script>

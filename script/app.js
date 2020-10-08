@@ -49,7 +49,9 @@ const QuoteBlock = (() => {
         const containerId = "#quoteContainer",
             quoteTextSelector = ".quote-text",
             quoteNameSelector = ".quote-name";
-
+            () => {
+                q.fadout();
+            }
         const quotes = [
             { name: "&mdash; Lynn Ryon", text: "Dan has mad skills and without question genealogy research is one of them!" },
             { name: "&mdash; Dianah Dulany", text: "I just can’t say how much I’m loving what Dan is finding! And he’s fast! " },
@@ -73,10 +75,8 @@ const QuoteBlock = (() => {
                 if(quoteIndex >= quotes.length) {
                     quoteIndex = 0;
                 }
-                const quote = quotes[quoteIndex];
- 
-                elements[1].innerHTML = quote.name;
-                elements[2].innerHTML = quote.text;
+                elements[1].innerHTML = quotes[quoteIndex].name;
+                elements[2].innerHTML = quotes[quoteIndex].text;
                 elements[0].classList.add("fade-in");
             }, 200);
         }
@@ -87,9 +87,3 @@ const QuoteBlock = (() => {
 // const wc = new WaterColor();
 // wc.init();
 
-document.addEventListener("DOMContentLoaded", () => {
-    const q = new QuoteBlock();
-    window.setInterval(() => {
-        q.fadout();
-    }, 5000);
-}, false);

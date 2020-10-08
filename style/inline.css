@@ -60,6 +60,7 @@ a[role="button"] {
 .font-sm { font-size: 1.3rem; }
 .font-xs { font-size: 1rem; }
 .line-height-md { line-height: 3.4rem; }
+.text-center { text-align: center; }
 .color-main { color: var(--dark-green); }
 .color-md-gray { color: var(--main-font-color); }
 .color-lt-gray { color: var(--light-font-color); }
@@ -147,8 +148,6 @@ a[role="button"] {
     justify-content: space-evenly;
     padding: 0 4rem;
     max-width: 102rem;
-    width: 100%;
-    margin: 0 auto;
 }
 .card {
     min-height: 34rem;
