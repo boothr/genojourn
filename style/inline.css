@@ -163,7 +163,7 @@ a[role="button"] {
 .step-title {
     position: -webkit-sticky;
     position: sticky;
-    top: 14.502857143rem;
+    top: 16.34rem;
     z-index: 6;
     background-color: rgba(255, 255, 255, 1);
 }
@@ -177,7 +177,7 @@ a[role="button"] {
     height: 4.8rem;
     position: -webkit-sticky;
     position: sticky;
-    top: 9.889285714rem;
+    top: 11.57rem;
     z-index: 6;
     background-color: rgba(255, 255, 255, 1);
 }
