@@ -267,21 +267,21 @@ a[role="button"] {
 .bg-splash {
     grid-area: splash;
     grid-row-start: 2;
-    background-image: url("../content/bg-splash.jpg");
+    background-image: url("../content/pexels-heinz-klier-8457162.jpg");
     height: 54vh;
     min-height: 20rem;
     max-height: 54vh;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: center;
     opacity: 1;
     background-size: cover;
-    opacity: 0.35;
+    opacity: 0.65;
     z-index: 2;
 }
 .splash-line {
     grid-area: splashline;
     grid-row-start: 2;
-    z-index: 2;
+    z-index: 3;
     height: 54vh;
     min-height: 20rem;
     max-height: 54vh;
@@ -363,6 +363,8 @@ a[role="button"] {
         grid-template-rows: 6.5rem calc(100vh - 6.5rem) auto;
     }
     .splash-line {
-        padding-left: 0.8rem;
+        /* padding-left: 0.8rem; */
+        padding: 0;
+        justify-content: center;
     }
 }
